@@ -36,23 +36,24 @@ function compra(producto) {
         stockInsuficiente(stock);
     }
 }
+for (let i = 0; i = isNaN(cantidadComprada); i++) {
+    let cantidadProductos = parseInt(prompt("Ingrese la cantidad de productos a COMPRAR"));
 
-let cantidadProductos = parseInt(prompt("Ingrese la cantidad de productos a COMPRAR"));
-
-for (let i = 0; i < cantidadProductos; i++) {
-    let productoAcomprar = prompt("¿Que producto quiere comprar?");
-    productoAcomprar = productoAcomprar.toLowerCase();
-    if (productoAcomprar == brownie.nombre) {
-        compra(brownie);
-    } else
-    if (productoAcomprar == cheescake.nombre) {
-        compra(cheescake);
-    } else if (productoAcomprar == rogel.nombre) {
-        compra(rogel);
-    } else if (productoAcomprar == lemonpie.nombre) {
-        compra(lemonpie);
-    } else {
-        alert("No tenemos ese producto");
+    for (let i = 0; i < cantidadProductos; i++) {
+        let productoAcomprar = prompt("¿Que producto quiere comprar?");
+        productoAcomprar = productoAcomprar.toLowerCase();
+        if (productoAcomprar == brownie.nombre) {
+            compra(brownie);
+        } else
+        if (productoAcomprar == cheescake.nombre) {
+            compra(cheescake);
+        } else if (productoAcomprar == rogel.nombre) {
+            compra(rogel);
+        } else if (productoAcomprar == lemonpie.nombre) {
+            compra(lemonpie);
+        } else {
+            alert("No tenemos ese producto");
+        }
     }
-};
+}
 alert("Usted tiene que pagar $" + total);
