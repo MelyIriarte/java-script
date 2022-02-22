@@ -10,6 +10,9 @@ class Producto {
     }
 }
 
+let listaProductosMenu = "Nuestras tortas son:"
+let contador = 0;
+
 const brownie = new Producto("brownie", 2000, 10);
 const cheescake = new Producto("cheescake", 3000, 5);
 const rogel = new Producto("rogel", 2200, 3);
@@ -17,13 +20,13 @@ const lemonpie = new Producto("lemonpie", 1500, 6);
 
 const listadoProductos = [brownie, cheescake, rogel, lemonpie];
 
-let listaProductosMenu = "Nuestras tortas son:"
-let contador = 0;
+listadoProductos.push(new Producto("milhojas", 2000, 2));
 
 for (producto of listadoProductos) {
     contador++;
     listaProductosMenu += "\n" + contador + "- " + producto.nombre;
 }
+
 alert(listaProductosMenu);
 
 let cantidadComprada;
@@ -59,6 +62,8 @@ for (let i = 0; i = isNaN(cantidadComprada); i++) {
             compra(rogel);
         } else if (productoAcomprar == lemonpie.nombre) {
             compra(lemonpie);
+        } else if (productoAcomprar == listadoProductos[4].nombre) {
+            compra(listadoProductos[4]);
         } else {
             alert("No tenemos ese producto");
         }
