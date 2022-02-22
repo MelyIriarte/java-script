@@ -32,8 +32,8 @@ alert(listaProductosMenu);
 let cantidadComprada;
 let total = 0;
 
-function stockInsuficiente(stock) {
-    alert("no tenemos suficiente stock de " + stock);
+function stockInsuficiente(producto) {
+    alert("no tenemos suficiente stock de " + producto);
 }
 
 function compra(producto) {
@@ -43,7 +43,7 @@ function compra(producto) {
         producto.stockActual(cantidadComprada);
         total += producto.precio * cantidadComprada;
     } else {
-        stockInsuficiente(stock);
+        stockInsuficiente(producto.nombre);
     }
 }
 
