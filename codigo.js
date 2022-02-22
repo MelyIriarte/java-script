@@ -15,7 +15,16 @@ const cheescake = new Producto("cheescake", 3000, 5);
 const rogel = new Producto("rogel", 2200, 3);
 const lemonpie = new Producto("lemonpie", 1500, 6);
 
-alert("Nuestras tortas son:" + "\n" + brownie.nombre + "\n" + cheescake.nombre + "\n" + rogel.nombre + "\n" + lemonpie.nombre);
+const listadoProductos = [brownie, cheescake, rogel, lemonpie];
+
+let listaProductosMenu = "Nuestras tortas son:"
+let contador = 0;
+
+for (producto of listadoProductos) {
+    contador++;
+    listaProductosMenu += "\n" + contador + "- " + producto.nombre;
+}
+alert(listaProductosMenu);
 
 let cantidadComprada;
 let total = 0;
@@ -28,14 +37,13 @@ function compra(producto) {
     cantidadComprada = parseInt(prompt("Cuantos quiere:"));
 
     if (producto.stock >= cantidadComprada) {
-
         producto.stockActual(cantidadComprada);
         total += producto.precio * cantidadComprada;
-
     } else {
         stockInsuficiente(stock);
     }
 }
+
 for (let i = 0; i = isNaN(cantidadComprada); i++) {
     let cantidadProductos = parseInt(prompt("Ingrese la cantidad de productos a COMPRAR"));
 
